@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { securityGuard } from './security.guard';
+//import { securityGuard } from './security.guard';
 //import { CategoriesServices } from '@service/categories.service';
 
 export const routes: Routes = [
     {
         path: 'dashboard',
         loadComponent: () => import('./pages/dashboard/dashboard.component'),
-        canActivate: [securityGuard],
+      //  canActivate: [securityGuard],
         loadChildren: () => import('./pages/dashboard/dashboard.routers')
     },
     {

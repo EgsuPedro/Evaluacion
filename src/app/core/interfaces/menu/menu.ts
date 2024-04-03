@@ -3,11 +3,9 @@ export interface Menu
 id: number;
 namedish: string;
 platedescription: string;
-idcategories?:number;
+idcategories:string;
 prece: string;
 cost: string;
 ingredients: string;     
 image: string;     
-
-
 }

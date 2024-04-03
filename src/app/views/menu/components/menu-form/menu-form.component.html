@@ -1,1 +1,60 @@
-<p>menu-form works!</p>
+
+<div class="max-w-sm mx-auto px-1 py-2 rounded-md" [formGroup]="form">
+    <text
+      [label]="'Nombre Plato'"
+      placeholder="Ingrese el nombre Plato"
+      [fGroup]="form"
+      controlName="namedish"
+      [activeUpercase]="true"
+    />
+    <text
+      [label]="'Descripcion Plato'"
+      placeholder="Ingrese la descripcion del plato"
+      [fGroup]="form"
+      controlName="platedescription"
+      [activeUpercase]="true"
+    />
+    <text
+    [label]="'Id Categoria'"
+    placeholder="Id Categoria"
+    [fGroup]="form"
+    controlName="idcategories"
+    [activeUpercase]="true"
+  />
+  <text
+  [label]="'PVP'"
+  placeholder="Precio"
+  [fGroup]="form"
+  controlName="prece"
+  [activeUpercase]="true"
+/>
+<text
+[label]="'Costo'"
+placeholder="Costo Plato"
+[fGroup]="form"
+controlName="cost"
+[activeUpercase]="true"
+/>
+<text
+[label]="'Ingredientes'"
+placeholder="Ingredientes Plato"
+[fGroup]="form"
+controlName="ingredients"
+[activeUpercase]="true"
+/>
+
+<text
+[label]="'imagen'"
+placeholder="Imagen Plato"
+[fGroup]="form"
+controlName="image"
+[activeUpercase]="true"
+/>
+    <button
+      type="submit"
+      class="text-white bg-black-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      (click)="saveData()">
+      Submit
+    </button>
+  </div>
+  

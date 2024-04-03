@@ -18,17 +18,22 @@
         </tr>
       </thead>
       <tbody>
-        @for (category of categories; track category) {
+        @for (menus of menu; track menus) {
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
               scope="row"
               class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              {{ category.id }}
+              {{ menus.id }}
             </th>
-            <td class="px-6 py-4">{{ category.name }}</td>
-            <td class="px-6 py-4">{{ category.description }}</td>
-            <td class="px-6 py-4">{{ category.state }}</td>
+            <td class="px-6 py-4">{{ menus.namedish }}</td>
+            <td class="px-6 py-4">{{ menus.platedescription }}</td>
+            <td class="px-6 py-4">{{ menus.idcategories }}</td>
+            <td class="px-6 py-4">{{ menus.prece}}</td>
+            <td class="px-6 py-4">{{ menus.cost }}</td>
+            <td class="px-6 py-4">{{ menus.ingredients }}</td>
+            <td class="px-6 py-4"><img srcset="{{ menus.image }}" class="w-full h-full object-cover" alt=""
+            /> </td>
           </tr>
         }
       </tbody>

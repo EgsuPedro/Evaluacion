@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { CategoriesServices } from '@service/categories.service';
 import { resolverCategoryResolver } from '../../core/resolvers/resolver-category.resolver';
+import { resolverMenuResolver } from '../../core/resolvers/resolver-menu.resolver';
+import { MenuService } from '@service/menu.service';
 
 const routes: Routes = [
     {
@@ -21,7 +23,16 @@ const routes: Routes = [
     },
     {
         path: 'menu',
-        loadComponent: () => import('../../views/menu/menu.component'),
+        loadComponent: () => import('../../views/menu/menu.component').then((m) => m.MenuComponent),
+        providers: [MenuService],
+        resolve: { menu: resolverMenuResolver }
+
+    },
+    {
+        path: 'menu/:id',
+        loadComponent: () => import('../../views/menu/menu.component').then((m) => m.MenuComponent),
+        providers: [MenuService],
+        resolve: { menu: resolverMenuResolver }
     },
     {
         path: 'orders',

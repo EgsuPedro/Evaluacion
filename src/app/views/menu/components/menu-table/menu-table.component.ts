@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Menu } from '@interfaces/menu/menu';
 
 @Component({
   selector: 'menu-table',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu-table.component.scss'
 })
 export class MenuTableComponent {
-
+  @Input({ required: true }) menu!: Menu[];
 }
 
 

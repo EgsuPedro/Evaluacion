@@ -6,11 +6,11 @@ export class MenuMapper {
         return {
             id: data.id,
             namedish: data.nombre_plato,
-            description: data.descripcion_plato,
-            idcategory: data.id_categoria,
-            pvp: data.precio_venta,
-            costo: data.costo_produccion,
-            ingredient: data.ingredientes,
+            platedescription: data.description_plato,
+            idcategories: data.id_categoria,
+            prece: data.precio_venta,
+            cost: data.costo_produccion,
+            ingredients: data.ingredientes,
             image: data.imagen_plato
 
         };
@@ -18,8 +18,9 @@ export class MenuMapper {
     }
     static toJson(data: Menu):  MenuResponse {
         return {
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             nombre_plato: data.namedish,
-            descripcion_plato: data.platedescription,
+            description_plato: data.platedescription,
             id_categoria: data.idcategories,
             precio_venta: data.prece,
             costo_produccion: data.cost,
